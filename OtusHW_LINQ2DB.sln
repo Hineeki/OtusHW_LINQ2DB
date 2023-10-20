@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OtusHW_LINQ2DB", "OtusHW_LINQ2DB\OtusHW_LINQ2DB.csproj", "{7F6C3FEB-EB88-4B69-8A8C-8D3B799269EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_LINQ2DB_Library", "HW_LINQ2DB_Library\HW_LINQ2DB_Library.csproj", "{1C232B49-A7C5-4629-B836-425F6925E221}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F6C3FEB-EB88-4B69-8A8C-8D3B799269EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F6C3FEB-EB88-4B69-8A8C-8D3B799269EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F6C3FEB-EB88-4B69-8A8C-8D3B799269EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F6C3FEB-EB88-4B69-8A8C-8D3B799269EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C232B49-A7C5-4629-B836-425F6925E221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C232B49-A7C5-4629-B836-425F6925E221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C232B49-A7C5-4629-B836-425F6925E221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C232B49-A7C5-4629-B836-425F6925E221}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83B626E0-DA00-4686-B567-0E1E4484A916}
+	EndGlobalSection
+EndGlobal
