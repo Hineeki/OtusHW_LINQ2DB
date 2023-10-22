@@ -1,6 +1,7 @@
 ﻿using HW_LINQ2DB_Library;
 using LinqToDB;
 using LinqToDB.Data;
+using static LinqToDB.Reflection.Methods.LinqToDB.Insert;
 
 namespace OtusHW_LINQ2DB
 {
@@ -31,12 +32,31 @@ namespace OtusHW_LINQ2DB
                 Console.WriteLine();
                 Console.WriteLine("Кол-во одинаковых заказов одним человеком: "+orders);
             }
-            //    using (var db = new DataConnection(ProviderName.PostgreSQL, Config.SqlConnectionString))
-            //{
-            //    var asd = db.Select<CustomTable>(selector: db.GetTable<Customer>(),);
-            //}
-                Console.WriteLine("HelloWorld, End");
+            using (var db = new DataConnection(ProviderName.PostgreSQL, Config.SqlConnectionString))
+            {
+                var query = from c in db.GetTable<Customer>()
+                          join o in db.GetTable<Order>() on c.Id equals o.CustomerId
+                          join p in db.GetTable<Product>() on o.ProductId equals p.Id
+                          where c.Age > 25 && o.ProductId == 1
+                          select new
+                          {
+                              c.Id,
+                              c.FirstName,
+                              c.LastName,
+                              o.ProductId,
+                              p.StockQuantity,
+                              p.Price
+                          };
+                var list = query.ToList();
+                Console.WriteLine();
+                foreach (var item in list)
+                {
+                    Console.WriteLine($"CustomerID: {item.Id}, FirstName: {item.FirstName}, LastName: {item.LastName}, ProductID: {item.ProductId}, ProductQuantity: {item.StockQuantity}, ProductPrice: {item.Price}");
+                }
+            }
+            Console.WriteLine("HelloWorld, End");
         }
+
         private static void PrintCustomer(Customer customer)
         {
             Console.WriteLine($"{customer.Id}, {customer.LastName} {customer.FirstName} \t{customer.Age}");
